@@ -63,40 +63,43 @@ const Technologies = ({ techologiesPromise }: TechnologiesProps) => {
               );
 
               return (
-                <div
-                  key={technology.id}
-                  className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+               <div
+                    key={technology.id}
+                    className={`rounded-lg border bg-white p-5 shadow-sm ${
+                        isAdded ? "border-pink-500" : "border-gray-200"}`}>
                   <div className="flex items-center justify-between">
-                    <img src={technology.icon} alt={technology.name} className="h-10 w-10 object-contain" />
-                    <span
-                      className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                         technology.badge === "Popular"
-                        ? "border-blue-200 bg-blue-50 text-blue-600"
-                        : technology.badge === "Versatile"
-                          ? "border-purple-200 bg-purple-50 text-purple-600"
-                          : technology.badge === "Fast"
+                    <img src={technology.icon} alt={technology.name} className="h-10 w-10 " />
+                      {technology.badge && (
+                      <span
+                        className={`rounded-full border px-3 py-1 text-xs font-medium ${
+                          technology.badge === "Popular"
+                            ? "border-blue-200 bg-blue-50 text-blue-600"
+                            : technology.badge === "Versatile"
+                            ? "border-purple-200 bg-purple-50 text-purple-600"
+                            : technology.badge === "Fast"
                             ? "border-orange-200 bg-orange-50 text-orange-600"
                             : technology.badge === "Modern"
-                              ? "border-purple-200 bg-purple-50 text-purple-600"
-                              : technology.badge === "Standard"
-                                ? "border-green-200 bg-green-50 text-green-600"
-                                : technology.badge === "Top SQL"
-                                  ? "border-blue-200 bg-blue-50 text-blue-600"
-                                  : technology.badge === "Flexible"
-                                    ? "border-green-200 bg-green-50 text-green-600"
-                                    : technology.badge === "Cache"
-                                      ? "border-red-200 bg-red-50 text-red-600"
-                                      : technology.badge === "Ubiquitous"
-                                        ? "border-yellow-200 bg-yellow-50 text-yellow-600"
-                                        : technology.badge === "Essential"
-                                          ? "border-blue-200 bg-blue-50 text-blue-600"
-                                          : technology.badge === "Containers"
-                                            ? "border-cyan-200 bg-cyan-50 text-cyan-600"
-                                            : "border-gray-200 bg-gray-50 text-gray-600"
-                      }`}
-                    >
-                      {technology.badge}
-                    </span>
+                            ? "border-purple-200 bg-purple-50 text-purple-600"
+                            : technology.badge === "Standard"
+                            ? "border-green-200 bg-green-50 text-green-600"
+                            : technology.badge === "Top SQL"
+                            ? "border-blue-200 bg-blue-50 text-blue-600"
+                            : technology.badge === "Flexible"
+                            ? "border-green-200 bg-green-50 text-green-600"
+                            : technology.badge === "Cache"
+                            ? "border-red-200 bg-red-50 text-red-600"
+                            : technology.badge === "Ubiquitous"
+                            ? "border-yellow-200 bg-yellow-50 text-yellow-600"
+                            : technology.badge === "Essential"
+                            ? "border-blue-200 bg-blue-50 text-blue-600"
+                            : technology.badge === "Containers"
+                            ? "border-cyan-200 bg-cyan-50 text-cyan-600"
+                            : "border-gray-200 bg-gray-50 text-gray-600"
+                        }`}
+                      >
+                        {technology.badge}
+                      </span>
+                    )}
                   </div>
 
                   <h2 className="mt-5 text-xl font-bold text-[#202b3d]">
@@ -126,13 +129,13 @@ const Technologies = ({ techologiesPromise }: TechnologiesProps) => {
                   <button
                     onClick={() => handleAddToStack(technology)}
                     disabled={isAdded ? true : false}
-                    className={`mt-5 w-full rounded-md py-3 text-sm font-medium text-white transition ${
+                    className={` mt-5 w-full rounded-md py-3 text-sm font-medium  transition ${
                       isAdded
-                        ? "cursor-not-allowed bg-gray-400"
-                        : "bg-[#172033] hover:bg-[#28364d]"
+                        ? "cursor-not-allowed bg-pink-100  text-pink-600"
+                        : "bg-[#172033] hover:bg-[#28364d] text-white"
                     }`}
                   >
-                    {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+                    {isAdded ? " ✓ Added to Stack" : "Add to Stack"}
                   </button>
                 </div>
               );
@@ -140,24 +143,19 @@ const Technologies = ({ techologiesPromise }: TechnologiesProps) => {
           </div>
 
           
-          <div className="h-fit rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="h-fit rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
             <h2 className="text-xl font-bold text-[#202b3d]">
               Your Stack
             </h2>
-
             <p className="mt-1 text-sm text-gray-500">
-              {selectedTechnologies.length} Technologies Selected
+              {selectedTechnologies.length === 0
+                ? "No technologies selected yet."
+                : `${selectedTechnologies.length} Technologies Selected`}
             </p>
-
-            
             {selectedTechnologies.length === 0 && (
-              <div className="py-16 text-center">
-                <p className="font-medium text-gray-500">
-                  Your stack is empty
-                </p>
-
-                <p className="mt-2 text-sm text-gray-400">
-                  Add technologies to build your stack.
+              <div className="mt-6 rounded-xl border border-dashed border-gray-300 py-10 text-center">
+                <p className="text-gray-400">
+                  Your stack is empty.
                 </p>
               </div>
             )}

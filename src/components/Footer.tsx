@@ -12,7 +12,10 @@ const Footer = () => {
             <img
               src={Logo}alt="Dev Stack"className="h-10 w-auto"/>
 
-           
+            <p className="mt-3 max-w-[430px] text-sm leading-5 text-gray-500">
+              Curated tools, technologies, and resources for developers building
+              modern software.
+            </p>
 
             <div className="mt-7 flex gap-5 text-sm text-[#475569]">
               <a href="#">GitHub</a>
@@ -58,7 +61,17 @@ const Footer = () => {
 
         </div>
 
-        
+        <div className="mt-14 flex flex-col gap-4 border-t border-gray-200 pt-8 text-sm text-gray-400 md:flex-row md:items-center md:justify-between">
+
+          <p>© 2026 Dev Stack. All rights reserved.</p>
+
+          <div className="flex gap-6">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+
+        </div>
+
       </div>
     </footer>
   );
