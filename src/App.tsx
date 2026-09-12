@@ -13,11 +13,14 @@ function App() {
  const techologiesPromise = techologiesFetch();
   return (
     <>
-      <Nav/>
-      <Hero />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Technologies techologiesPromise ={techologiesPromise}/> 
-      </Suspense>
+     <Nav />
+
+      <main className="pt-[75px]">
+        <Hero />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Technologies techologiesPromise={techologiesPromise} />
+        </Suspense>
+      </main>
     </>
   )
 }
