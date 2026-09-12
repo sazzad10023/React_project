@@ -169,12 +169,7 @@ const Technologies = ({ techologiesPromise }: TechnologiesProps) => {
                       className="flex items-center justify-between rounded-md border border-gray-200 p-3"
                     >
                       <div className="flex items-center gap-3">
-                        <img
-                          src={technology.icon}
-                          alt={technology.name}
-                          className="h-8 w-8 object-contain"
-                        />
-
+                        <img src={technology.icon} alt={technology.name}className="h-8 w-8 object-contain"/>
                         <div>
                           <h3 className="text-sm font-semibold text-[#202b3d]">
                             {technology.name}
