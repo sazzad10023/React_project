@@ -18,7 +18,7 @@ function App() {
 
       <main className="pt-[75px]">
         <Hero />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<h2>Loading...</h2>}>
           <Technologies techologiesPromise={techologiesPromise} />
         </Suspense>
         <Footer/>
