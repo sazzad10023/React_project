@@ -1,3 +1,5 @@
+
+import { CiMenuBurger } from "react-icons/ci";
 import Logo from "../assets/logo-text.png";
 
 const Nav = () => {
@@ -6,7 +8,7 @@ const Nav = () => {
       <div className="mx-auto flex h-[75px] max-w-[1280px] items-center justify-between px-5">
         
         <button className="text-3xl text-gray-600 md:hidden">
-          ☰
+          <CiMenuBurger />
         </button>
 
         <img src={Logo} alt="Logo" className="h-8 w-auto"/>

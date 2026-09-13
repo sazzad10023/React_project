@@ -4,14 +4,13 @@ import Logo from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <footer className="border-t border-gray-200 bg-[#f8fafc]">
-      <div className="mx-auto max-w-[1400px] px-9 py-6 md:py-7">
+      <div className="mx-auto max-w-[1290px] px-9 py-6 md:pt-20 md:pb-7">
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
 
           <div>
-            <img
-              src={Logo}alt="Dev Stack"className="h-10 w-auto"/>
-
+            <img src={Logo}alt="Dev Stack"/>
+              
             <p className="mt-3 max-w-[430px] text-sm leading-5 text-gray-500">
               Curated tools, technologies, and resources for developers building
               modern software.
