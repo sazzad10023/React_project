@@ -17,9 +17,9 @@ const Footer = () => {
             </p>
 
             <div className="mt-7 flex gap-5 text-sm text-[#475569]">
-              <a href="#">GitHub</a>
-              <a href="#">Twitter</a>
-              <a href="#">LinkedIn</a>
+              <a href="https://github.com">GitHub</a>
+              <a href="https://twitter.com">Twitter</a>
+              <a href="https://linkedin.com">LinkedIn</a>
             </div>
           </div>
 
@@ -29,9 +29,9 @@ const Footer = () => {
             </h3>
 
             <div className="mt-4 flex flex-col gap-3 text-sm text-gray-500">
-              <a href="#">Home</a>
-              <a href="#">Technologies</a>
-              <a href="#">Projects</a>
+              <a href="#home">Home</a>
+              <a href="#technologies">Technologies</a>
+              <a href="#projects">Projects</a>
             </div>
           </div>
 
@@ -41,9 +41,9 @@ const Footer = () => {
             </h3>
 
             <div className="mt-4 flex flex-col gap-3 text-sm text-gray-500">
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-              <a href="#">Careers</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <a href="#careers">Careers</a>
             </div>
           </div>
 
@@ -53,8 +53,8 @@ const Footer = () => {
             </h3>
 
             <div className="mt-4 flex flex-col gap-3 text-sm text-gray-500">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="#privacy">Privacy Policy</a>
+              <a href="#terms">Terms of Service</a>
             </div>
           </div>
 
@@ -65,8 +65,8 @@ const Footer = () => {
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
           <div className="flex gap-6">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
           </div>
 
         </div>
